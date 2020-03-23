@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS input sanitization demo</title>
+    <script src="./dompurify/dist/purify.js"></script>
+    <script src="./js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="santizer__user-input">
+            <div>
+                Input:
+            </div>
+            <textarea id="user-input" rows=10></textarea>
+        </div>
+        <div class="sanitzer__btns">
+            <button onclick="onSanitize()" class="btn btn-primary input-btn">Sanitize</button>
+        </div>
+        <div>
+            <div>
+                Output:
+            </div>
+            <div id="user-output">
+
+            </div>
+        </div>
+        <div class="sanitzer__btns">
+            <button onclick="onClear()" class="btn btn-secondary input-btn">Clear</button>
+        </div>
+    </div>
+</body>
+</html>
